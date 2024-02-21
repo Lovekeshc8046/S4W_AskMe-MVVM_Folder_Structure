@@ -1,0 +1,133 @@
+<mat-horizontal-stepper>
+  <!-- Step 1 -->
+  <mat-step [stepControl]="firstFormGroup">
+    <ng-template matStepLabel>Step 1</ng-template>
+    <app-form1 [formGroup]="firstFormGroup"></app-form1>
+    <div>
+      <button mat-button matStepperNext>Save and Continue</button>
+    </div>
+  </mat-step>
+
+  <!-- Step 2 -->
+  <mat-step [stepControl]="secondFormGroup">
+    <ng-template matStepLabel>Step 2</ng-template>
+    <app-form2 [formGroup]="secondFormGroup"></app-form2>
+    <div>
+      <button mat-button matStepperNext>Save and Continue</button>
+    </div>
+  </mat-step>
+
+  <!-- Step 3 -->
+  <mat-step [stepControl]="thirdFormGroup">
+    <ng-template matStepLabel>Step 3</ng-template>
+    <app-form3 [formGroup]="thirdFormGroup"></app-form3>
+    <div>
+      <button mat-button matStepperNext>Save and Continue</button>
+    </div>
+  </mat-step>
+
+  <!-- Step 4 -->
+  <mat-step [stepControl]="fourthFormGroup">
+    <ng-template matStepLabel>Step 4</ng-template>
+    <app-form4 [formGroup]="fourthFormGroup"></app-form4>
+    <div>
+      <button mat-button matStepperNext>Save and Continue</button>
+    </div>
+  </mat-step>
+
+  <!-- Step 5 -->
+  <mat-step [stepControl]="fifthFormGroup">
+    <ng-template matStepLabel>Step 5</ng-template>
+    <app-form5 [formGroup]="fifthFormGroup">
+      <div class="container">
+        <form [formGroup]="formGroup">
+          <h4>Add Business Timing</h4>
+          <div>
+            <label for="closedDay">Closed Day:</label>
+            <select id="closedDay" name="closedDay" formControlName="closedDay">
+              <option value="">Select a day to close</option>
+              <option value="Monday">Monday</option>
+              <option value="Tuesday">Tuesday</option>
+              <option value="Wednesday">Wednesday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>
+              <option value="Saturday">Saturday</option>
+              <option value="Sunday">Sunday</option>
+            </select>
+          </div>
+
+          <div class="time-container time-row">
+            <div>
+              <input type="text" id="openAtHour" name="openAtHour" formControlName="openAtHour" placeholder="Open At">
+              <select id="openAtPeriod" name="openAtPeriod" formControlName="openAtPeriod">
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+              </select>
+            </div>
+
+            <div>
+              <input type="text" id="closeAtHour" name="closeAtHour" formControlName="closeAtHour"
+                placeholder="Close At">
+              <select id="closeAtPeriod" name="closeAtPeriod" formControlName="closeAtPeriod">
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+    </app-form5>
+    <br>
+    <div>
+      <button mat-button matStepperNext>Save and Continue</button>
+    </div>
+  </mat-step>
+
+  <!-- Step 6 -->
+  <mat-step [stepControl]="SixthFormGroup">
+    <ng-template matStepLabel>Step 6</ng-template>
+    <app-form6 [formGroup]="SixthFormGroup">
+      <div class="container">
+        <form [formGroup]="formGroup" class="container">
+          <h4>Payment Details</h4>
+          <div class="form-group">
+            <label for="consultationFees">Consultation Fees: <span class="required">*</span></label>
+            <input type="number" id="consultationFees" name="consultationFees" class="form-control" required
+              [(ngModel)]="consultationFees">
+          </div>
+          <div class="form-group">
+            <label for="modeOfPayment">Mode of Payment:</label>
+            <select id="modeOfPayment" name="modeOfPayment" class="form-control" required [(ngModel)]="modeOfPayment">
+              <option value="credit">Credit Card</option>
+              <option value="debit">Debit Card</option>
+              <option value="paypal">PayPal</option>
+              <!-- Add more options as needed -->
+            </select>
+          </div>
+        </form>
+      </div>
+    </app-form6>
+    <br>
+    <div>
+      <button mat-button matStepperNext>Save and Continue</button>
+    </div>
+  </mat-step>
+
+  <!-- Step 7 -->
+  <mat-step [stepControl]="seventhFormGroup">
+    <ng-template matStepLabel>Step 7</ng-template>
+    <app-form7 [formGroup]="seventhFormGroup">
+      <div class="container">
+        <form [formGroup]="formGroup" class="container">
+          <h4>Add Images</h4>
+          <input type="file" (change)="onFileSelected($event)">
+        </form>
+      </div>
+    </app-form7>
+    <br>
+    <div>
+      <button mat-button matStepperNext (click)="uploadImage()">Submit</button>
+    </div>
+  </mat-step>
+
+</mat-horizontal-stepper>

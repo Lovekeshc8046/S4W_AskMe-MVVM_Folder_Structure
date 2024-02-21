@@ -1,0 +1,13 @@
+@import "~font-awesome/css/font-awesome.min.css";
+@import '~@fortawesome/fontawesome-free/css/all.css';
+@import '~font-awesome/css/font-awesome.min.css';
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

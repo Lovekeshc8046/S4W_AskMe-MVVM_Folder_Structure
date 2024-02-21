@@ -1,0 +1,130 @@
+.navbar {
+    width: 100%;
+    padding: 1.5rem 0px;
+    max-height: 12vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.026) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    position: sticky;
+    top: 0px;
+    background-color: #fff;
+}
+.navbar-logo{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+.navbar-logo a{
+    text-decoration: none;
+}
+.nav-links a{
+    text-decoration: none;
+    color: #001;
+}
+.nav-links ul li{
+    display: inline-block;
+    padding: 0px 2rem;
+    
+}
+.tapbar {
+    display: none;
+    background-color: #fff;
+    
+}
+.top-bar {
+    display: none;
+    position: sticky;
+    top: 0px;
+    background-color: #fff;
+}
+.askMe-logo {
+    padding: 0px 5px;
+}
+.add-business-button {
+    padding: 0px 5px;
+}
+.add-business-button i{
+    font-size: 1.5rem;
+}
+.add-business-button a{
+    text-decoration: none;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar {
+        display: none;
+    }
+
+    .tapbar {
+        display: block;
+        width: 100%;
+        margin: 0px auto;
+        position: fixed;
+        bottom: 0px;
+        padding: 1rem 0px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+
+    }
+
+    .tapbar-icons {
+        width: 80%;
+        margin: 0px auto;
+        padding: 0.5rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .tapbar i {
+        font-size: 1.5rem;
+        color: #6ab6f1;
+    }
+
+    .top-bar {
+        height: 10vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    }
+}
+
+@media (max-width: 767px)  {
+    .navbar {
+        display: none;
+    }
+
+    .tapbar {
+        display: block;
+        width: 100%;
+        position: fixed;
+        bottom: 0px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    }
+
+    .tapbar-icons {
+        width: 100%;
+        margin: 0px auto;
+        padding: 1rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .tapbar i {
+        font-size: 1.5rem;
+        color: #6ab6f1;
+    }
+
+    .top-bar {
+        height: 10vh;
+        width: 100%;
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    }
+}
